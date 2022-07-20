@@ -2,11 +2,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
     background: linear-gradient(135deg,#8B55E9,#5D6BE6,#262254);
 }
 
 .wrapper{
+    visibility: hidden;
     width:300px;
     background: #fff;
     border-radius: 10px;
@@ -43,4 +45,28 @@ body{
     margin-top: -5px;
     padding: 5px 12px;
     border-top: 1px solid #ccc;
+}
+
+.content .share{
+    position: relative;
+    justify-content:space-between;
+}
+
+.share .share-menu{
+    position:absolute;
+    background:#fff;
+    width:200px;
+    right:-220px;
+    top:-35px;
+    padding:13px;
+    opacity:0;
+    pointer-events:none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition:0.2s ease;
+}
+
+.share:hover .share-menu{
+    opacity:1;
+    pointer-events: auto;
 }
